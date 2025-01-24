@@ -1,0 +1,125 @@
+---
+title: "Intro to Quarto"
+authors:
+  - name: Jessica Scrimshire
+    affiliation: Digital Health and Care Wales
+    roles: writing
+    corresponding: true
+date: "`r Sys.Date()`"
+bibliography: references.bib
+link-citations: true
+format:
+  html:
+    mainfont: "Rubik"
+output:
+  redoc::redoc
+---
+
+# Introduction
+
+Welcome to this Quarto demo! Quarto is a powerful tool for creating dynamic documents, presentations, and websites. In this demo, I'm going to cover some basic features.
+
+## Code Chunks
+
+You can include code chunks in various coding languages. Here's an example of an R code chunk:
+
+```{r}
+# This is an R code chunk
+summary(cars)
+
+```
+
+```{r}
+# This R chunk makes a graph
+plot(cars)
+```
+
+But we can also code in python:
+
+```{python}
+# This is a Python code chunk
+import numpy as np
+print(np.mean([1, 2, 3, 4, 5]))
+
+```
+
+```{python}
+# This Python chunk makes a graph
+import matplotlib.pyplot as plt
+plt.plot([1, 2, 3], [4, 5, 6])
+plt.show()
+
+```
+
+## Reports
+
+The markdown element of Quarto allows you to format text with *italic emphasis* and **bold emphasis**. You can also add superscripts^2^, subscripts~2~, and display in-text code `verbatim`. You can also ~~strikethrough~~ text and present it in [small caps]{.smallcaps}.
+
+You can embed [links with names](https://quarto.org/), direct urls like <https://quarto.org/>, and links to [other places]() in the document.
+
+### Technical Writing
+
+The area of a circle is $A = \pi r^2$, where $r$ is the radius and $\pi$ is the constant $3.141592\ldots$
+
+A larger equation:
+
+$$
+f(x)={\sqrt{\frac{\tau}{2\pi}}}
+      e^{-\tau (x-\mu )^{2}/2}
+$$
+
+### Images
+
+The syntax for inserting links is similar for embedding an inline image: ![render icon](images/dhcw.png){#fig-nadolig width="20%"}.
+
+Or images as block element...
+
+![NADOLIG](images/dog2.png){width="100%"}
+
+You can change the position of these images:
+
+![Smaller Right NADOLIG](images/dog3.png){#fig-nadolig-small-right fig-align="right" width="50%"}
+
+Can do the same for figures:
+
+```{r}
+#| label: fig-palmer
+#| fig-cap: "**Figure about Bills of Palmer Penguins** "
+#| fig-subcap: 
+#| echo: false
+#| warning: false
+#| fig-align: left
+#| fig-height: 3
+#| fig-width: 5
+
+library(palmerpenguins)
+library(ggplot2)
+
+ggplot(penguins,
+       aes(x = bill_length_mm,
+           y = bill_depth_mm,
+           col = island)) +
+  geom_point()
+```
+
+## Cross Referencing
+
+### Figures
+
+First image @fig-nadolig
+
+Second image @fig-nadolig-small-right
+
+Figure @fig-palmer
+
+### Citations
+
+Here are two references I made earlier: [@johns2022; @raichle2015]
+
+Let's add some more ([@fldi1998])
+
+### Footnotes
+
+Where is the footnote?[^1]
+
+[^1]: Here is the footnote

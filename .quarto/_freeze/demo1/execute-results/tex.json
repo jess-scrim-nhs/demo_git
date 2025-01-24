@@ -1,0 +1,17 @@
+{
+  "hash": "8fc9be2b2d920357319ae1801506cf02",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"Quarto Demo\"\nauthor: \"Jess Scrimshire\"\ndate: \"2025-01-22\"\noutput: html_document\nbibliography: references.bib\nlink-citations: true\nformat:\n  pdf:\n    mainfont: \"Rubik\"\n    sansfontoptions:\n      - Color=325083\n---\n\n\n\n## Quarto\n\nMarkdown allows you to format text with *italic emphasis* and **bold emphasis**. You can also add superscripts^2^, subscripts~2~, and display code `verbatim`. Little known fact: you can also ~~strikethrough~~ text and present it in [small caps]{.smallcaps}.\n\n## Technical Writing\n\nThe area of a circle is $A = \\pi r^2$, where $r$ is the radius and $\\pi$ is the constant $3.141592\\ldots$\n\nA larger equation:\n\n$$\nf(x)={\\sqrt{\\frac{\\tau}{2\\pi}}}\n      e^{-\\tau (x-\\mu )^{2}/2}\n$$\n\nYou can embed [links with names](https://quarto.org/), direct urls like <https://quarto.org/>, and links to [other places](#inline-elements-text-formatting) in the document. The syntax is similar for embedding an inline image: ![render icon](images/dhcw.png){#fig-nadolig width=\"20%\"}.\n\nOr images as block element...\n\n![NADOLIG](images/dog2.png){width=\"100%\"}\n\n![Smaller Right NADOLIG](images/dog2.png){#fig-nadolig-small-right fig-align=\"right\" width=\"50%\"}\n\nCan do the same for figures:\n\n\n\n::: {.cell layout-align=\"right\" sub-label='{}'}\n::: {.cell-output-display}\n![](demo1_files/figure-pdf/fig-palmer-1.pdf){#fig-palmer fig-align='right'}\n:::\n:::\n\n\n\n## Cross Referencing\n\n### Figures\n\nFirst image @fig-nadolig\n\nSecond image @fig-nadolig-small-right\n\nFigure @fig-palmer\n\n### Citations\n\nHere are two references I made earlier: [@johns2022; @raichle2015]\n\n### Footnotes\n\nWhere is the footnote?[^1]\n\n[^1]: This is a footnote\n",
+    "supporting": [
+      "demo1_files\\figure-pdf"
+    ],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": null,
+    "postProcess": false
+  }
+}
